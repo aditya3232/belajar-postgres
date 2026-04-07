@@ -23,3 +23,14 @@
 2. kapan pakai sql -> struktur data fix tidak berubah, butuh proses berurutan dan konsisten (ACID), data punya relasi jelas
 3. kapan pakai nosql -> struktur data fleksibel misal data user bisa memiliki field beda-beda, traffic besar dan tidak butuh relasi, misal log system, cache
 ```
+
+## data type PostgreSQL
+```zsh
+1. numeric -> bigint, integer, smallint, serial, bigserial, decimal, numeric, double precision
+2. date time -> date, time, timestamp
+3. boolean -> boolean
+4. character -> character, character varying, text, uuid
+5. json types
+6. array
+7. xml type
+```
