@@ -51,5 +51,5 @@ SELECT DISTINCT ON (department_id)  -- ambil 1 baris pertama untuk setiap depart
     salary                          -- kolom yang ditampilkan
 FROM employees                      -- sumber data dari tabel employees
 ORDER BY
-    department_id,                  -- WAJIB: harus sesuai dengan DISTINCT ON (ini penentu grup)
+    department_id,                  -- WAJIB: harus sesuai dengan DISTINCT ON (ini penentu grup). disini urutkan dulu berdasarkan department_id (ASC default), baru salary DESC
     salary DESC;                    -- dalam tiap grup, urutkan dari salary tertinggi → jadi yang dipilih adalah gaji tertinggi
