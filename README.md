@@ -8,6 +8,7 @@
     - sequence (perlu buat sequence nya dulu, nanti objek ini bisa dipakai dimana aja, dan bisa custom behavior, misal start 100, increment 5)
 4. || -> untuk menggabungkan string, kalau di mysql pakai CONCAT() 
 5. DISTINCT ON (X) -> khusus PostgreSQL. kelompokkan berdasarkan X, lalu ambil baris pertama dari tiap kelompok 
+6. current_date, current_timestamp -> khusus PostgreSQL, kalau di mysql CURDATE()
 ```
 
 ## non-relasional & relasional 
@@ -28,11 +29,58 @@
 
 ## data type PostgreSQL
 ```zsh
-1. numeric -> bigint, integer, smallint, serial, bigserial, decimal, numeric, double precision
-2. date time -> date, time, timestamp
-3. boolean -> boolean
-4. character -> character, character varying, text, uuid
-5. json types
-6. array
-7. xml type
+1. numeric -> 
+   smallint, integer, bigint, decimal, numeric, real, double precision, 
+   serial ❌, bigserial ❌
+
+2. date time -> 
+   date, time, timestamp, 
+   timestamptz ❌, interval ❌
+
+3. boolean -> 
+   boolean ❌ (di mysql = tinyint)
+
+4. character -> 
+   character, character varying, text, uuid ❌
+
+5. json types -> 
+   json, jsonb ❌
+
+6. array -> 
+   integer[], text[], dll ❌
+
+7. xml type -> 
+   xml ❌
+
+8. binary data -> 
+   bytea (mysql = blob)
+
+9. enum -> 
+   enum (ada di mysql, tapi beda implementasi)
+
+10. network -> 
+    inet ❌, cidr ❌, macaddr ❌
+
+11. range types -> 
+    int4range ❌, int8range ❌, numrange ❌, 
+    tsrange ❌, tstzrange ❌, daterange ❌
+
+12. composite type -> 
+    custom type (row type) ❌
+
+13. domain -> 
+    custom constraint type ❌
+
+14. object identifier -> 
+    oid ❌
+
+postgres unggul di:
+- jsonb
+- array
+- range
+- network type
+- custom type (composite, domain)
+- interval & timestamptz
+
+mysql tidak punya semua itu
 ```
