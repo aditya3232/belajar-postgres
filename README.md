@@ -9,6 +9,12 @@
 4. || -> untuk menggabungkan string, kalau di mysql pakai CONCAT(), di PostgreSQL juga bisa pakai CONCAT() sebagai build-in function string
 5. DISTINCT ON (X) -> khusus PostgreSQL. kelompokkan berdasarkan X, lalu ambil baris pertama dari tiap kelompok 
 6. current_date, current_timestamp -> khusus PostgreSQL, kalau di mysql CURDATE(). ini berhubungan dengan build-in function date/time
+7. group by grouping sets ((x), (y)) -> artinya kita bikin beberapa group by query, lalu digabung jadi satu. biasanya buat laporan multi level
+    Bayangin kamu bikin laporan:
+    Laporan jumlah karyawan per manager
+    Laporan jumlah karyawan per department
+    Biasanya → harus 2 query
+    pakai GROUPING SETS → cukup 1 query
 ```
 
 ## non-relasional & relasional 
