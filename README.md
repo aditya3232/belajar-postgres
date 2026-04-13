@@ -48,6 +48,8 @@
 -> PostgreSQL lebih fleksibel dan lebih dulu menyediakan fitur ini
 
 9. PostgreSQL Lebih strict dalam constraint & tipe data
+10. Penggunaan placeholder postgresql pakai ($1, $2) kalau mysql ?
+11. Parsing parameter nya bisa langsung, kalau mysql pakai @variable
 ```
 
 ## non-relasional & relasional 
