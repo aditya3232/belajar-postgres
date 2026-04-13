@@ -60,7 +60,7 @@ INSERT INTO countries (country_id, country_name, region_id)
 VALUES ('ID', 'Republic Indonesia', 3)
 on conflict (country_id) do nothing;
 
--- on conflict do update
+-- on conflict do update -> insert kalau belum ada, update kalau sudah ada -> UPSERT
 -- jika ada conflict waktu insert
 -- akan melakukan update data
 INSERT INTO countries (country_id, country_name, region_id)
