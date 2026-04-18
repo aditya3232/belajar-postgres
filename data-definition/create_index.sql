@@ -37,3 +37,23 @@ WHERE "deleted_at" IS NULL;
 -- CREATE INDEX IF NOT EXISTS idx_todos_employee_active
 -- ON "public"."todos" ("employee_id")
 -- WHERE "deleted_at" IS NULL;
+
+-- contoh kalau ada problem unique key
+ALTER TABLE "public"."todos"
+ADD COLUMN IF NOT EXISTS "email" VARCHAR(255);
+
+ALTER TABLE "public"."todos"
+ALTER COLUMN "email" SET NOT NULL;
+
+-- =========================================================
+-- UNIQUE INDEX (SOFT DELETE AWARE)
+-- =========================================================
+
+-- Unique hanya untuk data aktif (deleted_at IS NULL)
+-- Jadi:
+-- - email sama masih aktif → ❌ ditolak
+-- - email sama tapi sudah di-soft-delete → ✅ boleh
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_unique_email_active
+ON "public"."todos" ("email")
+WHERE "deleted_at" IS NULL;
