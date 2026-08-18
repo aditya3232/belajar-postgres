@@ -1,4 +1,4 @@
-## 1. Denormalisasi Data
+# Denormalisasi Data
 - normalisasi data digunakan untuk membuat model basis data yang baik
 - normalisasi data sebenarnya hanyalah petunjuk saja, dalam keadaan tertentu kadang kita bisa melanggar aturan dari normalisasi data
 - pelanggaran normalisasi data tersebut kita sebut denormalisasi data
