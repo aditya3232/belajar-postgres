@@ -87,13 +87,6 @@
 - Mengurangi redundansi dengan relasi antar tabel
 - Menggunakan normalisasi
 
-### Normalisasi
-- 1NF → 1 kolom = 1 nilai (tidak boleh array dalam kolom)
-- 2NF → semua kolom bergantung ke seluruh primary key
-  ❌ (order_id, product_id, product_name)
-  ✅ product_name harus di tabel produk
-- 3NF → tidak ada ketergantungan transitif (non-key ke non-key)
-
 # SQL vs NoSQL
 ### Gunakan SQL jika:
 - Struktur data jelas & tetap
