@@ -53,6 +53,7 @@ ALTER COLUMN "email" SET NOT NULL;
 -- Jadi:
 -- - email sama masih aktif → ❌ ditolak
 -- - email sama tapi sudah di-soft-delete → ✅ boleh
+-- - partial index ini tidak ada di mysql
 
 CREATE UNIQUE INDEX IF NOT EXISTS idx_unique_email_active
 ON "public"."todos" ("email")
