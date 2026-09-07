@@ -5,7 +5,7 @@
 
 ## 2. Bentuk Normal Basis Data ke 2 (2NF)
 - harus sudah dalam bentuk normal basis data ke 1
-- buat tabel terpisah untuk nilai-nilai yang keluar berulang kali pada beberapa baris (kalau ada sekiranya kombinasi kolom yg berulang maka pisahkan)
+- jika ada composite key (gabungan key), dan atribut non-key bergantung pada sebagaian composite key, maka pisah ke tabel lain
 - tambahkan primary key pada tiap tabel
 - hubungkan menggunakan foreign key
 
